@@ -1,0 +1,23 @@
+<div>
+    <h2>{{ carId ? 'Edit Car' : 'Add Car' }}</h2>
+    <form [formGroup]="carForm" (ngSubmit)="onSubmit()">
+      <div>
+        <label for="vehicleBrand">Brand</label>
+        <input id="vehicleBrand" formControlName="vehicleBrand">
+      </div>
+      <div>
+        <label for="vehicleModel">Model</label>
+        <input id="vehicleModel" formControlName="vehicleModel">
+      </div>
+      <div>
+        <label for="manufactureYear">Year</label>
+        <input id="manufactureYear" formControlName="manufactureYear">
+      </div>
+      <div>
+        <label for="vehicleColor">Color</label>
+        <input id="vehicleColor" formControlName="vehicleColor">
+      </div>
+      <button type="submit">{{ carId ? 'Update' : 'Add' }}</button>
+    </form>
+  </div>
+  

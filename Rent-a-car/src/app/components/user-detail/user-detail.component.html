@@ -1,0 +1,19 @@
+<div>
+    <h2>{{ userId ? 'Edit User' : 'Add User' }}</h2>
+    <form [formGroup]="userForm" (ngSubmit)="onSubmit()">
+      <div>
+        <label for="customerName">Name</label>
+        <input id="customerName" formControlName="customerName">
+      </div>
+      <div>
+        <label for="customerEmail">Email</label>
+        <input id="customerEmail" formControlName="customerEmail">
+      </div>
+      <div>
+        <label for="customerPhone">Phone</label>
+        <input id="customerPhone" formControlName="customerPhone">
+      </div>
+      <button type="submit">{{ userId ? 'Update' : 'Add' }}</button>
+    </form>
+  </div>
+  
