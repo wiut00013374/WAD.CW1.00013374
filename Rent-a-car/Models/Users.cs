@@ -4,7 +4,7 @@ namespace Rent_a_car.Models
 {
     public class Users
     {
-
+        [Key]
         public int UserId { get; set; }
 
         [Required(ErrorMessage = "This field is mandatory.")]
