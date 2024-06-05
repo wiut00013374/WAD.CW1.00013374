@@ -15,14 +15,14 @@ namespace Rent_a_car.Controllers
             _carsRepository = carsRepository;
         }
 
-        // GET: api/Cars  14055
+
         [HttpGet]
         public async Task<IEnumerable<Car>> GetVehicles()
         {
             return await _carsRepository.FetchAllVehicles();
         }
 
-        // GET: api/Cars/5
+
         [HttpGet("{id}")]
         public async Task<ActionResult<Car>> GetVehicle(int id)
         {
@@ -36,8 +36,7 @@ namespace Rent_a_car.Controllers
             return Ok(car);
         }
 
-        // PUT: api/Cars/5 14055
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateVehicle(int id, Car car)
         {
@@ -49,8 +48,7 @@ namespace Rent_a_car.Controllers
             return NoContent();
         }
 
-        // POST: api/Cars 14055
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+
         [HttpPost]
         public async Task<ActionResult<Car>> AddVehicle(Car car)
         {
@@ -59,7 +57,7 @@ namespace Rent_a_car.Controllers
             return CreatedAtAction("GetVehicle", new { id = car.CarId }, car);
         }
 
-        // DELETE: api/Cars/5
+
         [HttpDelete("{id}")]
         public async Task<IActionResult> RemoveVehicle(int id)
         {
@@ -69,3 +67,4 @@ namespace Rent_a_car.Controllers
         }
     }
 }
+//00013374

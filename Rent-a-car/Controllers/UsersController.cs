@@ -15,14 +15,14 @@ namespace Rent_a_car.Controllers
             _usersRepository = usersRepository;
         }
 
-        // GET: api/Customer
+
         [HttpGet]
         public async Task<IEnumerable<Users>> GetAllUsers()
         {
             return await _usersRepository.FetchAllUsers();
         }
 
-        // GET: api/Customer/5
+
         [HttpGet("{id}")]
         public async Task<ActionResult<Users>> GetUser(int id)
         {
@@ -36,7 +36,7 @@ namespace Rent_a_car.Controllers
             return Ok(user);
         }
 
-        // PUT: api/Customer/5
+
         [HttpPut("{id}")]
         public async Task<IActionResult> UpdateUser(int id, Users user)
         {
@@ -48,7 +48,7 @@ namespace Rent_a_car.Controllers
             return NoContent();
         }
 
-        // POST: api/Customer
+
         [HttpPost]
         public async Task<ActionResult<Users>> AddUser(Users user)
         {
@@ -57,7 +57,7 @@ namespace Rent_a_car.Controllers
             return CreatedAtAction("GetUser", new { id = user.UserId }, user);
         }
 
-        // DELETE: api/Customer/5
+
         [HttpDelete("{id}")]
         public async Task<IActionResult> RemoveUser(int id)
         {
@@ -67,3 +67,4 @@ namespace Rent_a_car.Controllers
         }
     }
 }
+//00013374
